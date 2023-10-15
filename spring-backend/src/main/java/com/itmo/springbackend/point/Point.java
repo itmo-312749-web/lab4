@@ -16,7 +16,7 @@ import java.util.UUID;
 @Getter
 public class Point {
 
-    @jakarta.persistence.Transient
+    @Transient
     private static final List<Checker> checkers = List.of(
             (Point point) -> (-point.getX() / 2) <= point.getX() && point.getX() <= 0 &&
                     0 <= point.getY() && point.getY() <= point.getR(),
